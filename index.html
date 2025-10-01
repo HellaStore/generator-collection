@@ -45,13 +45,44 @@
             resize: none;
         }
     </style>
+    <style>
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientMove 5s ease infinite;
+}
+</style>
+
+<style>
+/* Animasi warna berganti */
+@keyframes rainbow {
+  100% { color: red; }
+  100% { color: orange; }
+  100% { color: yellow; }
+  100% { color: green; }
+  100% { color: blue; }
+  100% { color: indigo; }
+  100% { color: violet; }
+  100% { color: red; }
+}
+
+.rainbow-text {
+  animation: rainbow 5s infinite;
+}
+</style>
 </head>
-<body class="bg-gradient-to-r from-pink-200 via-pink-100 to-white min-h-screen">
+<body class="min-h-screen bg-gradient-to-r from-pink-400 via-purple-300 to-purple-600 bg-[length:200%_200%] animate-gradient"
+>
     <div class="container mx-auto px-4 py-8">
         <div class="max-w-4xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-8">
-                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">NDENGKOT COLLECTION</h1>
+                <h1 class="text-3xl md:text-4xl font-bold mb-2 rainbow-text">NDENGKOT COLLECTION</h1>
                 <p class="text-gray-600"> </p>
             </div>
                 <div class="md:flex">
